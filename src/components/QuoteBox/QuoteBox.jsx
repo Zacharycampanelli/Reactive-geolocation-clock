@@ -7,7 +7,7 @@ const QuoteBox = () => {
   const [quote, setQuote] = useState(null);
   const [author, setAuthor] = useState(null);
   const [toggleApiCall, setToggleApiCall] = useState(false);
-  const quotableAPIUrl = 'https://api.quotable.io/random';
+  const quotableAPIUrl = 'https://api.quotable.io/random?minLength=100&tags=technology';
 
   const { data, isPending, error } = useFetch(quotableAPIUrl, toggleApiCall);
 

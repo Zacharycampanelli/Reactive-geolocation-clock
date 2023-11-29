@@ -1,3 +1,4 @@
+import Clock from "./components/Clock/Clock"
 import QuoteBox from "./components/QuoteBox/QuoteBox"
 import Background from "./layout/Background"
 
@@ -10,6 +11,7 @@ function App() {
 
        <QuoteBox />
         </div>
+        <Clock />
       </Background>
     </div>
   )
