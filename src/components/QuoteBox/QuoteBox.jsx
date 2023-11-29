@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
-
+import SvgIconRefresh from '../../assets/icons/IconRefresh';
 const QuoteBox = () => {
   const [quote, setQuote] = useState(null);
   const [author, setAuthor] = useState(null);
@@ -29,7 +27,7 @@ const QuoteBox = () => {
         <cite className='font-bold'>{author}</cite>
       </div>
       <button onClick={toggleNewQuote}>
-      <FontAwesomeIcon icon={faArrowsRotate} className="text-white opacity-50" />
+      <SvgIconRefresh />
       </button>
     </div>
   );

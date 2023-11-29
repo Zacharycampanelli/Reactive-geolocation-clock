@@ -10,8 +10,8 @@ function App() {
         <div className="container p-7">
 
        <QuoteBox />
-        </div>
         <Clock />
+        </div>
       </Background>
     </div>
   )
