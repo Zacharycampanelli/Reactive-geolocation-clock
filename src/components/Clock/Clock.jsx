@@ -27,7 +27,8 @@ const Clock = () => {
   }
 
   return (
-    <div>
+    // <div className='absolute top-[66%] -translate-y-2/3	'>
+    <div className='mb-4'>
     <Greeting time={time} />
       <time className="font-bold text-[100px] text-white leading-[100px] tracking-[-2.5px]">{formatTime(time)}</time>{' '}
       <span className="ml-1 font-light text-[15px] text-white leading-7">{timeZone.abbr}</span>

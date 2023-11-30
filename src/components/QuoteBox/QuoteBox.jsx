@@ -21,8 +21,8 @@ const QuoteBox = () => {
   }
 
   return (
-    <div className="flex justify-between items-start">
-      <div className="flex flex-col w-5/6 text-[12px] text-white leading-6">
+    <div className="flex justify-between items-start min-h-[55%]">
+      <div className="flex flex-col w-5/6  text-[12px] text-white leading-6">
         <blockquote className='mb-2'>{quote}</blockquote>
         <cite className='font-bold'>{author}</cite>
       </div>
