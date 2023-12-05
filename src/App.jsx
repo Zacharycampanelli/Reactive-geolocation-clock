@@ -9,15 +9,15 @@ import { useState } from "react"
 function App() {
   const [expanded, setExpanded] = useState(false)
   return (
-    <div className="w-full min-w-full ">
+    <div className="w-full min-w-full min-h-full">
       <Background>
         <div className="container relative h-screen p-7">
-      {!expanded &&
-       <QuoteBox /> }
-        <Clock />
+   
+       <QuoteBox expanded={expanded}/> 
+        <Clock expanded={expanded} />
         <DisplayCity />
      
-        <ScreenDrawer setExpanded={setExpanded}/>
+        <ScreenDrawer expanded={expanded} setExpanded={setExpanded}/>
         </div>
       </Background>
     </div>

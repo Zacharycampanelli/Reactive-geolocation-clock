@@ -20,7 +20,7 @@ const Greeting = ({ time }) => {
 
 
   return <div className='flex'>
-    {icon} <span className='ml-4 text-[15px] text-white leading-[25px] tracking-[3px] uppercase'>{phrase}</span>
+    {icon} <span className='ml-4 mb-4 text-[15px] text-white leading-[25px] tracking-[3px] uppercase'>{phrase}</span>
   </div>;
 };
 

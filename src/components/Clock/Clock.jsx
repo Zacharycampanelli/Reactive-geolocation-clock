@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 import Greeting from '../Greeting/Greeting';
 import ClockContext from '../../context';
 
-const Clock = () => {
+const Clock = ({expanded}) => {
 
   const { timeZoneAbr, setTimeZone, setTimeZoneAbr, setDayOfWeek, setDayOfYear, setWeekNumber } = useContext(ClockContext)
   const [time, setTime] = useState(null);
@@ -30,7 +30,7 @@ const Clock = () => {
 
   return (
     // <div className='absolute top-[66%] -translate-y-2/3	'>
-    <div className='mb-4'>
+    <div className={`mb-4`&& expanded ? `mt-[25%]` : `mt-[70%]`}>
     <Greeting time={time} />
       <time className="font-bold text-[100px] text-white leading-[100px] tracking-[-2.5px]">{formatTime(time)}</time>{' '}
       <span className="ml-1 font-light text-[15px] text-white leading-7">{timeZoneAbr}</span>

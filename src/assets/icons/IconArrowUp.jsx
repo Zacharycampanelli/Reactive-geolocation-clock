@@ -1,10 +1,9 @@
-import * as React from "react";
+import * as React from 'react';
 const SvgIconArrowUp = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} {...props}>
-    <g fill="none" fillRule="evenodd">
-      <circle cx={20} cy={20} r={20} fill="#303030" />
-      <path stroke="#FFF" strokeWidth={2} d="m14 23 6-6 6 6" />
-    </g>
+  <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} fill="none" {...props}>
+    <circle cx={16} cy={16} r={16} fill="#303030" />
+    <path stroke="#fff" strokeWidth={2} d="m11.2 18.4 4.8-4.8 4.8 4.8" />
   </svg>
 );
+
 export default SvgIconArrowUp;
