@@ -8,7 +8,7 @@ export function ClockContextProvider({ children }) {
     const [dayOfWeek, setDayOfWeek] = useState()
     const [dayOfYear, setDayOfYear] = useState()
     const [weekNumber, setWeekNumber] = useState()
-
+    const [dayRange, setDayRange] = useState()
   const clockContextValue = {
     timeZone,
     setTimeZone,
@@ -19,7 +19,9 @@ export function ClockContextProvider({ children }) {
     dayOfYear, 
     setDayOfYear,
     weekNumber, 
-    setWeekNumber
+    setWeekNumber,
+    dayRange,
+    setDayRange
   };
 
   return <ClockContext.Provider value={clockContextValue}>{children}</ClockContext.Provider>;
