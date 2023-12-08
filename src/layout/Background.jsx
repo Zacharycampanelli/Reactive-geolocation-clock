@@ -1,23 +1,48 @@
-import { useContext, useEffect, useState } from 'react'
-import mobileDaytime from '../assets/mobile/bg-image-daytime.jpg'
-import mobileNighttime from '../assets/mobile/bg-image-nighttime.jpg'
+import { useContext, useEffect, useState } from 'react';
+import { useMediaQuery, useWindowSize } from '@uidotdev/usehooks';
 
-import ClockContext from '../context'
+import ClockContext from '../context';
 
+const Background = ({ children }) => {
+  const { dayRange } = useContext(ClockContext);
+  const [image, setImage] = useState('');
 
-const Background = ({children}) => {
-  const {dayRange} = useContext(ClockContext);
-  const [image, setImage] = useState('')
+  const isPhoneSize = useMediaQuery('only screen and (max-width : 768px)');
+  const isTabletSize = useMediaQuery('only screen and (min-width : 769px) and (max-width : 1439px)');
+  const isDesktopSize = useMediaQuery('only screen and (min-width : 1440px)');
+  const size = useWindowSize();
+
+  useEffect(() => {}, [size.width]);
+
+  console.log(dayRange);
 
   useEffect(() => {
-    if(dayRange === 'day') setImage('mobileDaytime')
-    else setImage('mobileNighttime')
-  }, [dayRange])
+    if (isPhoneSize) {
+      if (dayRange === 'day') {
+        setImage('bg-mobileDaytime');
+      } else {
+        setImage('bg-mobileNighttime');
+      }
+    } else if (isTabletSize) {
+      if (dayRange === 'day') {
+        setImage('bg-tabletDaytime');
+      } else {
+        setImage('bg-tabletNighttime');
+      }
+    } else {
+      if (dayRange === 'day') {
+        setImage('bg-desktopDaytime');
+      } else {
+        setImage('bg-desktopNighttime');
+      }
+    }
+  }, [dayRange, isPhoneSize, isTabletSize, isDesktopSize]);
+
   return (
-    <div  className={`w-full h-full min-w-full min-h-full bg-fixed bg-center bg-cover bg-${image} g-no-repeat`}>
+    <div className={`w-full h-full min-w-full min-h-full bg-fixed bg-center bg-cover ${image} g-no-repeat`}>
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default Background
+export default Background;
