@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { useMediaQuery, useWindowSize } from '@uidotdev/usehooks';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 import ClockContext from '../context';
 
@@ -10,11 +10,6 @@ const Background = ({ children }) => {
   const isPhoneSize = useMediaQuery('only screen and (max-width : 768px)');
   const isTabletSize = useMediaQuery('only screen and (min-width : 769px) and (max-width : 1439px)');
   const isDesktopSize = useMediaQuery('only screen and (min-width : 1440px)');
-  const size = useWindowSize();
-
-  useEffect(() => {}, [size.width]);
-
-  console.log(dayRange);
 
   useEffect(() => {
     if (isPhoneSize) {
