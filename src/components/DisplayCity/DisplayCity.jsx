@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 const DisplayCity = () => {
     const [city, setCity] = useState(null);
     const [country, setCountry] = useState(null);
-    const ipInfoAPIUrl = `https://api.ipbase.com/v2/info?apikey=ipb_live_USjaqi8RZx3XXbRz2uJxhkj32xg3UFSeffn4Kr7j`;
+    const ipInfoAPIUrl = `https://api.ipbase.com/v2/info?apikey=${import.meta.env.VITE_APIKEY}`;
   
     const { data, isPending, error } = useFetch(ipInfoAPIUrl, null);
 
