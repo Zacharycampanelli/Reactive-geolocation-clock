@@ -32,7 +32,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         <div className="flex flex-col items-stretch justify-between mb-6 column flex-column h-[90%] pt-10">
           <span className="flex justify-between w-[100%]">
             <p className="text-[10px] text-darkGray leading-[28px] tracking-[2px]">CURRENT TIMEZONE</p>
-            <p className="text-[20px] text-darkGray font-bold">{timeZone}</p>
+            <p className="text-[20px] text-darkGray font-bold">{timeZone !== undefined && formatTimeZone(timeZone)}</p>
           </span>
           <span className="flex justify-between w-[100%]">
             <p className="text-[10px] text-darkGray leading-[28px] tracking-[2px]">DAY OF THE YEAR</p>

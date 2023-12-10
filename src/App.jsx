@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="w-full min-w-full min-h-full">
       <Background>
-        <div className="container relative h-screen p-7">
+        <div className="container relative h-screen px-6 py-7 md:px-16 md:py-20">
    
        <QuoteBox expanded={expanded}/> 
         <Clock expanded={expanded} />

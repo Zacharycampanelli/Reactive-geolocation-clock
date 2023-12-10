@@ -1,3 +1,3 @@
-export const formatTimeZone = (timezone) => {
+export const formatTimeZone = (timezone) => { 
     return timezone.replace("_", " ")
 }
