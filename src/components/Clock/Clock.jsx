@@ -39,7 +39,7 @@ const Clock = ({ expanded }) => {
 
   return (
     // <div className='absolute top-[66%] -translate-y-2/3	'>
-    <div className={`mb-4` && expanded ? `mt-[25%]` : `mt-[70%] md: mt-[60%]`}>
+    <div className={`mb-4` && expanded ? `mt-[25%] md:mt-[15%]` : `mt-[70%] md: mt-[60%]`}>
       <Greeting time={time} />
       <time className="font-bold text-[100px] text-white leading-[100px] tracking-[-2.5px] md:text-[175px] md:leading-[175px] tracking-[-4.375px] ">
         {formatTime(time)}
