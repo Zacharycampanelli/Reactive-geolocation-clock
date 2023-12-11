@@ -61,7 +61,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         size={drawerSize}
         open={expanded}
         onClose={closeDrawer}
-        className={`${drawerBackground} p-4  backdrop-blur-[20px] md:px-16 md:py-0`}
+        className={`${drawerBackground} p-4  backdrop-blur-[20px] md:px-16 md:py-8`}
       >
         <div className="flex flex-col items-stretch justify-between mb-6 column flex-column h-[90%] pt-10 md:grid md:grid-cols-3 md:w-[100%] ">
           <DrawerItem
