@@ -9,9 +9,9 @@ import { useState } from "react"
 function App() {
   const [expanded, setExpanded] = useState(false)
   return (
-    <div className="w-full min-w-full min-h-full">
+    <div className="w-full h-full max-h-full min-w-full min-h-full">
       <Background>
-        <div className="container relative h-screen px-6 py-7 md:px-16 md:py-20">
+        <div className="container relative h-screen px-6 py-7 md:px-16 md:py-20 lg:px-[150px] lg:py-16">
    
        <QuoteBox expanded={expanded}/> 
         <Clock expanded={expanded} />

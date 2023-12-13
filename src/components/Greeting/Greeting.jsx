@@ -31,7 +31,7 @@ const Greeting = ({ time }) => {
 
   return (
     <div className="flex">
-      {icon} <span className="ml-4 mb-4 text-[15px] text-white leading-[25px] tracking-[3px] uppercase md:text-[18px] md:leading-[28px] tracking-[3.6px]">{phrase}{isTabletSize && ", It's currently"}</span>
+      {icon} <span className="ml-4 mb-4 text-[15px] text-white leading-[25px] tracking-[3px] uppercase md:text-[18px] md:leading-[28px] md:tracking-[3.6px] lg:text-[20px] lg:tracking-[4px]">{phrase}{isTabletSize && ", It's currently"}</span>
     </div>
   );
 };

@@ -17,7 +17,7 @@ const DisplayCity = () => {
         }
       }, [data]);
   return (
-    <div className='mt-4 mb-12 text-white text-[15px] font-bold leading-[28px] tracking-[3px] uppercase md:text-[18px] tracking-[3.6px]'>
+    <div className='mt-4 mb-12 text-white text-[15px] font-bold leading-[28px] tracking-[3px] uppercase md:text-[18px] md:tracking-[3.6px] lg:24px lg:tracking-[4.8px] lg:inline'>
       in {`${city}, ${country}`}
     </div>
   )

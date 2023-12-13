@@ -8,7 +8,7 @@ import DrawerItem from '../DrawerItem/DrawerItem';
 
 export function ScreenDrawer({ expanded, setExpanded }) {
   const { timeZone, dayOfYear, dayOfWeek, weekNumber, dayRange } = useContext(ClockContext);
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [drawerBackground, setDrawerBackground] = useState('');
   const [drawerSize, setDrawerSize] = useState(0);
   const [textColor, setTextColor] = useState();
@@ -18,12 +18,12 @@ export function ScreenDrawer({ expanded, setExpanded }) {
   const isDesktopSize = useMediaQuery('only screen and (min-width : 1440px)');
 
   const openDrawer = () => {
-    setOpen(true);
+    // setOpen(true);
     setExpanded(true);
     changeDrawerSize()
   };
   const closeDrawer = () => {
-    setOpen(false);
+    // setOpen(false);
     setExpanded(false);
   };
 
@@ -44,6 +44,9 @@ export function ScreenDrawer({ expanded, setExpanded }) {
     if (isTabletSize) {
       setDrawerSize(450);
     }
+    if (isDesktopSize) {
+      setDrawerSize(400);
+    }
   }
 
   // useEffect(() => {
@@ -51,8 +54,8 @@ export function ScreenDrawer({ expanded, setExpanded }) {
   // });
 
   return (
-    <>
-      <DrawerButton expanded={expanded} openDrawer={openDrawer}>
+    <div className='lg:flex lg:justify-end lg:mt-[-5%]'>
+      <DrawerButton expanded={expanded} openDrawer={openDrawer} >
         Open Drawer
       </DrawerButton>
       <Drawer
@@ -61,7 +64,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         size={drawerSize}
         open={expanded}
         onClose={closeDrawer}
-        className={`${drawerBackground} p-4  backdrop-blur-[20px] md:px-16 md:py-8`}
+        className={`${drawerBackground} p-4  backdrop-blur-[20px] md:px-16 md:py-8 lg:p-0`}
       >
         <div className="flex flex-col items-stretch justify-between mb-6 column flex-column h-[90%] pt-10 md:grid md:grid-cols-3 md:w-[100%] ">
           <DrawerItem
@@ -75,6 +78,6 @@ export function ScreenDrawer({ expanded, setExpanded }) {
           <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} />
         </div>
       </Drawer>
-    </>
+    </div>
   );
 }
