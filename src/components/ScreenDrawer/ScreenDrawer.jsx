@@ -20,7 +20,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
   const openDrawer = () => {
     // setOpen(true);
     setExpanded(true);
-    changeDrawerSize()
+    changeDrawerSize();
   };
   const closeDrawer = () => {
     // setOpen(false);
@@ -45,17 +45,17 @@ export function ScreenDrawer({ expanded, setExpanded }) {
       setDrawerSize(450);
     }
     if (isDesktopSize) {
-      setDrawerSize(400);
+      setDrawerSize(450);
     }
-  }
+  };
 
   // useEffect(() => {
-    
+
   // });
 
   return (
-    <div className='lg:flex lg:justify-end lg:mt-[-5%]'>
-      <DrawerButton expanded={expanded} openDrawer={openDrawer} >
+    <div className="relative lg:flex lg:justify-end lg:mt-[-5%]">
+      <DrawerButton expanded={expanded} openDrawer={openDrawer}>
         Open Drawer
       </DrawerButton>
       <Drawer
@@ -64,18 +64,19 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         size={drawerSize}
         open={expanded}
         onClose={closeDrawer}
-        className={`${drawerBackground} p-4  backdrop-blur-[20px] md:px-16 md:py-8 lg:p-0`}
-      >
-        <div className="flex flex-col items-stretch justify-between mb-6 column flex-column h-[90%] pt-10 md:grid md:grid-cols-3 md:w-[100%] ">
+        className={`${drawerBackground} z-10 p-4  backdrop-blur-[20px] md:px-16 md:py-0 lg:p-0`}
+        >
+        <div className="relative flex flex-col items-stretch justify-between mb-6 column flex-column h-[90%] pt-10 md:grid md:grid-cols-3 md:w-[100%] lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
           <DrawerItem
             label="CURRENT TIMEZONE"
             content={timeZone !== undefined && formatTimeZone(timeZone)}
             textColor={textColor}
             columns={2}
-          />
-          <DrawerItem label="DAY OF THE YEAR" content={dayOfYear} textColor={textColor} />
-          <DrawerItem label="DAY OF THE WEEK" content={dayOfWeek} textColor={textColor} columns={2}/>
-          <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} />
+            />
+          <DrawerItem label="DAY OF THE YEAR" content={dayOfYear} textColor={textColor} columns={1} />
+          <DrawerItem label="DAY OF THE WEEK" content={dayOfWeek} textColor={textColor} columns={2} />
+          <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} columns={1} />
+      {isDesktopSize && <div className={`absolute h-[60%] top-[25%] left-[50%] border-l border-solid ${dayRange === 'day' ? 'border-darkGray' : 'border-white'} opacity-25`}></div> }
         </div>
       </Drawer>
     </div>
