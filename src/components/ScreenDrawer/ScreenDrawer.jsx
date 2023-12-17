@@ -44,10 +44,10 @@ export function ScreenDrawer({ expanded, setExpanded }) {
       setDrawerSize(250);
     }
     if (isTabletSize) {
-      setDrawerSize(450);
+      setDrawerSize(425);
     }
     if (isDesktopSize) {
-      setDrawerSize(450);
+      setDrawerSize(400);
     }
   };
 
@@ -68,7 +68,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         onClose={closeDrawer}
         className={`${drawerBackground} z-10 px-4 backdrop-blur-[20px] md:px-16 md:py-0 lg:p-0`}
         >
-        <div className="relative flex flex-col items-stretch justify-between  mb-6 h-[90%] pt-10  md:grid md:grid-cols-3 md:w-[100%] lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
+        <div className="relative flex flex-col items-stretch justify-between mb-6 h-[90%] pt-10 md:mt-4 md:grid md:grid-cols-3 md:w-[100%] lg:mt-0 lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
           <DrawerItem
             label="CURRENT TIMEZONE"
             content={timeZone !== undefined && formatTimeZone(timeZone)}
@@ -78,7 +78,7 @@ export function ScreenDrawer({ expanded, setExpanded }) {
           <DrawerItem label="DAY OF THE YEAR" content={dayOfYear} textColor={textColor} id={2} />
           <DrawerItem label="DAY OF THE WEEK" content={dayOfWeek} textColor={textColor} id={3} />
           <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} id={4} />
-      {isDesktopSize && <div className={`absolute h-[60%] top-[25%] left-[50%] border-l border-solid ${dayRange === 'day' ? 'border-darkGray' : 'border-white'} opacity-25`}></div> }
+      {isDesktopSize && <div className={`absolute h-[65%] top-[25%] left-[50%] border-l border-solid ${dayRange === 'day' ? 'border-darkGray' : 'border-white'} opacity-25`}></div> }
         </div>
       </Drawer>
     </div>

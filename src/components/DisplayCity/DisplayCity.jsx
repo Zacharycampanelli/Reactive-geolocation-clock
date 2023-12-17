@@ -30,7 +30,7 @@ const DisplayCity = () => {
       }
 
   return (
-    <div className='mt-4 mb-[70px] text-white text-[13px] font-bold leading-[28px] tracking-[3px] uppercase md:text-[18px] md:tracking-[3.6px] lg:text-[24px] lg:tracking-[4.8px] lg:inline lg:mt-6'>
+    <div className='mt-4 mb-[55px] text-white text-[13px] font-bold leading-[28px] tracking-[3px] uppercase md:text-[18px] md:tracking-[3.6px] lg:text-[24px] lg:tracking-[4.8px] lg:inline lg:mt-6'>
       in {`${city}, ${state} ${country}`}
     </div>
   )
