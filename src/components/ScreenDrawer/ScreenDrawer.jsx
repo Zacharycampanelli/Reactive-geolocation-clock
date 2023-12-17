@@ -13,9 +13,11 @@ export function ScreenDrawer({ expanded, setExpanded }) {
   const [drawerSize, setDrawerSize] = useState(0);
   const [textColor, setTextColor] = useState();
 
-  const isPhoneSize = useMediaQuery('only screen and (max-width : 768px)');
-  const isTabletSize = useMediaQuery('only screen and (min-width : 769px) and (max-width : 1439px)');
+  const isPhoneSize = useMediaQuery('only screen and (max-width : 767px)');
+  const isTabletSize = useMediaQuery('only screen and (min-width : 768px) and (max-width : 1439px)');
   const isDesktopSize = useMediaQuery('only screen and (min-width : 1440px)');
+
+  let index = 0;
 
   const openDrawer = () => {
     // setOpen(true);
@@ -66,16 +68,16 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         onClose={closeDrawer}
         className={`${drawerBackground} z-10 px-4 backdrop-blur-[20px] md:px-16 md:py-0 lg:p-0`}
         >
-        <div className="relative flex flex-col items-stretch justify-between mb-6 h-[90%] pt-10 md:grid md:grid-cols-3 md:w-[100%] lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
+        <div className="relative flex flex-col items-stretch justify-between  mb-6 h-[90%] pt-10  md:grid md:grid-cols-3 md:w-[100%] lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
           <DrawerItem
             label="CURRENT TIMEZONE"
             content={timeZone !== undefined && formatTimeZone(timeZone)}
             textColor={textColor}
-            columns={2}
+            id={1}
             />
-          <DrawerItem label="DAY OF THE YEAR" content={dayOfYear} textColor={textColor} columns={1} />
-          <DrawerItem label="DAY OF THE WEEK" content={dayOfWeek} textColor={textColor} columns={2} />
-          <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} columns={1} />
+          <DrawerItem label="DAY OF THE YEAR" content={dayOfYear} textColor={textColor} id={2} />
+          <DrawerItem label="DAY OF THE WEEK" content={dayOfWeek} textColor={textColor} id={3} />
+          <DrawerItem label="WEEK NUMBER" content={weekNumber} textColor={textColor} id={4} />
       {isDesktopSize && <div className={`absolute h-[60%] top-[25%] left-[50%] border-l border-solid ${dayRange === 'day' ? 'border-darkGray' : 'border-white'} opacity-25`}></div> }
         </div>
       </Drawer>
