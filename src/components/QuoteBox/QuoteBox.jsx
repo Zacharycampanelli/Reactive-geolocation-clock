@@ -32,7 +32,7 @@ const QuoteBox = ({expanded}) => {
   }
 
   return (
-    <div className={`flex items-start justify-between md:justify-evenly lg:w-[50%] ${expanded ? `hidden` : ``}`}>
+    <div className={`absolute flex items-start justify-between w-[85%] md:justify-evenly lg:w-[50%] ${expanded ? `hidden` : ``}`}>
       <div className="flex flex-col w-[83%] text-[12px] text-white leading-6 md:text-[18px] md:leading-7 md:w-[90%]">
         <blockquote className='mb-2 md:mb-3'>{quote}</blockquote>
         <cite className='font-bold'>{author}</cite>

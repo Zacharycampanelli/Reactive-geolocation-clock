@@ -31,17 +31,17 @@ export function ScreenDrawer({ expanded, setExpanded }) {
 
   useEffect(() => {
     if (dayRange === 'day') {
-      setDrawerBackground('bg-white/75');
+      setDrawerBackground('bg-opaqueWhite');
       setTextColor('text-darkGray');
     } else {
-      setDrawerBackground('bg-black/75');
-      setTextColor('text-white');
+      setDrawerBackground('bg-opaqueDarkGray');
+      setTextColor('text-white ');
     }
   }, [dayRange]);
 
   const changeDrawerSize = () => {
     if (isPhoneSize) {
-      setDrawerSize(250);
+      setDrawerSize(265);
     }
     if (isTabletSize) {
       setDrawerSize(425);
@@ -66,9 +66,9 @@ export function ScreenDrawer({ expanded, setExpanded }) {
         size={drawerSize}
         open={expanded}
         onClose={closeDrawer}
-        className={`${drawerBackground} z-10 px-4 backdrop-blur-[20px] md:px-16 md:py-0 lg:p-0`}
+        className={`${drawerBackground} z-10 px-4 backdrop-blur-lg md:px-16 md:py-0 lg:p-0`}
         >
-        <div className="relative flex flex-col items-stretch justify-between mb-6 h-[90%] pt-10 md:mt-4 md:grid md:grid-cols-3 md:w-[100%] lg:mt-0 lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
+        <div className="relative flex flex-col h-[80%] items-stretch justify-between my-4 pt-10 md:mt-4 md:grid md:grid-cols-3 md:w-[100%] lg:mt-0 lg:grid-cols-4 lg:pl-[150px] lg:h-[85%] lg:pt-14">
           <DrawerItem
             label="CURRENT TIMEZONE"
             content={timeZone !== undefined && formatTimeZone(timeZone)}

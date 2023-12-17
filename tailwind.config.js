@@ -19,7 +19,9 @@ export default withMT({
       'black': '#000000',
       'darkGray': '#303030',
       'white': '#FFFFFF',
-      'red': '#A53226'
+      'red': '#A53226',
+      'opaqueWhite': '#FFFFFFBF',
+      'opaqueDarkGray': '#000000BF'
 
     },
     fontFamily: {

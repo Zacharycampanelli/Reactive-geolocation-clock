@@ -49,7 +49,7 @@ const Clock = ({ expanded }) => {
 
   return (
     // <div className='absolute top-[66%] -translate-y-2/3	'>
-    <div className={`mb-4 lg:mb-6 ${expanded ? `mt-[25%] md:mt-[12%] lg:mt-[0]` : `mt-[45%] md:mt-[60%] lg:mt-[18%]`}`}>
+    <div className={`mb-4 lg:mb-6 ${expanded ? `mt-[25%] md:mt-[12%] lg:mt-[0]` : `mt-[95%] md:mt-[80%] lg:mt-[30%]`}`}>
       <Greeting time={time} />
       <time className="font-bold text-[100px] text-white leading-[100px] tracking-[-2.5px] md:text-[175px] md:leading-[175px] md:tracking-[-4.375px] lg:text-[200px] lg:leading-[200px] lg:tracking-[-5px]">
         {formatTime(time)}
