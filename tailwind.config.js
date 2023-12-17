@@ -18,7 +18,9 @@ export default withMT({
     colors: {
       'black': '#000000',
       'darkGray': '#303030',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'red': '#A53226'
+
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif']

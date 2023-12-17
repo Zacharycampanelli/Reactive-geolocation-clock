@@ -9,7 +9,7 @@ import { useState } from "react"
 function App() {
   const [expanded, setExpanded] = useState(false)
   return (
-    <div className="w-full h-full max-h-full min-w-full min-h-full">
+    <div className="w-screen h-screen max-h-screen min-h-screen min-w-screen border-box">
       <Background>
         <div className="container relative h-screen px-6 py-7 md:px-16 md:py-20 lg:px-[150px] lg:py-16">
    

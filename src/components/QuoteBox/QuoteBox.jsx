@@ -21,6 +21,16 @@ const QuoteBox = ({expanded}) => {
     setToggleApiCall((prev) => !prev)
   }
 
+  if(isPending) {
+    return (<h1>Loading...</h1>)
+  }
+
+  if(error)  {
+    console.error("Error in trying to retrieve Quotation")
+    console.error(error)
+    return 
+  }
+
   return (
     <div className={`flex items-start justify-between md:justify-evenly lg:w-[50%] ${expanded ? `hidden` : ``}`}>
       <div className="flex flex-col w-[83%] text-[12px] text-white leading-6 md:text-[18px] md:leading-7 md:w-[90%]">
