@@ -1,8 +1,11 @@
 import { createContext, useState } from "react";
 
+// Create a new context named ClockContext
 const ClockContext = createContext(null);
 
+// Define a context provider component for managing clock-related state
 export function ClockContextProvider({ children }) {
+  // State variables for various clock-related information
   const [timeZone, setTimeZone] = useState();
   const [timeZoneAbr, setTimeZoneAbr] = useState();
   const [dayOfWeek, setDayOfWeek] = useState();
@@ -10,10 +13,12 @@ export function ClockContextProvider({ children }) {
   const [weekNumber, setWeekNumber] = useState();
   const [dayRange, setDayRange] = useState();
 
+  // Function to modify the week day number by incrementing it
   const modifyWeekDayNumber = (num) => {
     setDayOfWeek(++num);
   };
 
+  // Create an object with context values to be passed to consumers
   const clockContextValue = {
     timeZone,
     setTimeZone,
@@ -29,6 +34,7 @@ export function ClockContextProvider({ children }) {
     setDayRange,
   };
 
+  // Render the ClockContext.Provider with the provided context values
   return (
     <ClockContext.Provider value={clockContextValue}>
       {children}
@@ -37,4 +43,3 @@ export function ClockContextProvider({ children }) {
 }
 
 export default ClockContext;
-

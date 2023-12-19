@@ -1,23 +1,31 @@
 import { useContext, useEffect, useState } from "react";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useMediaQuery } from "@uidotdev/usehooks"
 
 import ClockContext from "../../context";
 import SvgIconSun from "../../assets/icons/IconSun";
 import SvgIconMoon from "../../assets/icons/IconMoon";
 
+// Define the Greeting component
 const Greeting = ({ time }) => {
+  // Destructure values from the ClockContext
   const { setDayRange } = useContext(ClockContext);
+
+  // State variables to manage the greeting icon and phrase
   const [icon, setIcon] = useState();
   const [phrase, setPhrase] = useState("");
 
+  // Check if the screen size matches a tablet breakpoint
   const isTabletSize = useMediaQuery(
     "only screen and (min-width : 769px) and (max-width : 1439px)",
   );
 
+  // Update the icon and phrase based on the time
   useEffect(() => {
+    // Extract the hour from the time prop
     let hour = new Date(time).toTimeString().split(":")[0];
     hour = Number(hour);
 
+    // Set the icon, phrase, and day range based on the time of day
     if (5 <= hour && hour < 12) {
       setIcon(<SvgIconSun />);
       setPhrase("Good morning");
@@ -33,6 +41,7 @@ const Greeting = ({ time }) => {
     }
   }, [time]);
 
+  // Render the Greeting component with the dynamic icon and phrase
   return (
     <div className="flex">
       {icon}{" "}

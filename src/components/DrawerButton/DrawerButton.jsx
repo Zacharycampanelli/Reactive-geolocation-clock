@@ -3,13 +3,17 @@ import { useEffect, useState } from "react";
 import SvgIconArrowDown from "../../assets/icons/IconArrowDown";
 import SvgIconArrowUp from "../../assets/icons/IconArrowUp";
 
+// Define the DrawerButton component
 const DrawerButton = ({ expanded, openDrawer }) => {
+  // State variable to manage the direction of the arrow icon
   const [arrow, setArrow] = useState("down");
 
+  // Update the arrow direction when the 'expanded' prop changes
   useEffect(() => {
     expanded ? setArrow("up") : setArrow("down");
   }, [expanded]);
 
+  // Render the DrawerButton component with a button that toggles the drawer
   return (
     <button
       onClick={openDrawer}

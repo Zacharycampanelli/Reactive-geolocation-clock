@@ -1,3 +1,5 @@
+// Define a utility function formatTimeZone for formatting timezone strings
 export const formatTimeZone = (timezone) => { 
-    return timezone.replace("_", " ")
+    // Replace underscores with spaces in the provided timezone string
+    return timezone.replace("_", " ");
 }
