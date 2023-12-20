@@ -29,12 +29,12 @@ export default withMT({
     },
     extend: {
       backgroundImage: {
-        'mobileDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/mobile/bg-image-daytime.jpg')",
-        'mobileNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/mobile/bg-image-nighttime.jpg')",
-        'tabletDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/tablet/bg-image-daytime.jpg')",
-        'tabletNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/tablet/bg-image-nighttime.jpg')",
-        'desktopDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/desktop/bg-image-daytime.jpg')",
-        'desktopNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./src/assets/desktop/bg-image-nighttime.jpg')"
+        'mobileDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./mobile/bg-image-daytime.jpg')",
+        'mobileNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./mobile/bg-image-nighttime.jpg')",
+        'tabletDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./tablet/bg-image-daytime.jpg')",
+        'tabletNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./tablet/bg-image-nighttime.jpg')",
+        'desktopDaytime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./desktop/bg-image-daytime.jpg')",
+        'desktopNighttime': "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./desktop/bg-image-nighttime.jpg')"
       }
     }
   },
